@@ -4,7 +4,7 @@ import org.junit.Test;
 public class TargetTest {
 
 	@Before
-	public void Beforeアノテーションはテスト毎に初期化処理を実行する() {
+	public void Beforeアノテーションでテスト毎の初期化処理を実行する() {
 		System.out.println("初期化");
 	}
 
