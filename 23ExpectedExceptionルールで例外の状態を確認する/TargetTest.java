@@ -8,11 +8,14 @@ public class TargetTest {
 	public ExpectedException thrown = ExpectedException.none();
 
 	@Test
-	public void ExpectedExceptionルールで例外の発生を確認する() {
-		thrown.expect(ArithmeticException.class);
+	public void ExpectedExceptionルールで例外の状態を確認する() {
+		String wrongMessage    = "間違ったメッセージ";
+		String expectedMessage = "期待されるメッセージ";
 
+		thrown.expect(RuntimeException.class);
+		thrown.expectMessage(expectedMessage);
 
-		int divideByZero = 1 / 0;
+		throw new RuntimeException(wrongMessage);
 	}
 
 }
