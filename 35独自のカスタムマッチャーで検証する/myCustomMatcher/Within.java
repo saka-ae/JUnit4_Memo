@@ -17,6 +17,7 @@ public class Within extends TypeSafeMatcher<Integer> {
 		return new Within(max);
 	}
 
+	// assertThat()内の処理で内部的に呼ばれる
 	// assertThat()の第一引数を受け取って検証する
 	@Override
 	protected boolean matchesSafely(Integer num) {
