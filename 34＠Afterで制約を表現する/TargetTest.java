@@ -16,10 +16,9 @@ public class TargetTest {
 	public void テスト１() {
 		;
 	}
-
 	@Test
 	public void テスト２() {
 		;
 	}
-	
+
 }
