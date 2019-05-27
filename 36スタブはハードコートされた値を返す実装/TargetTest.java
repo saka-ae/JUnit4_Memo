@@ -11,6 +11,7 @@ public class TargetTest {
 		Target stub = new Stub(NUMBER);
 
 		int actual = stub.getNumber();
+
 		assertThat(actual, equalTo(NUMBER));
 	}
 
