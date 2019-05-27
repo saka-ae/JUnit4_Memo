@@ -13,7 +13,7 @@ public class TargetTest {
 	// モックの型を指定
 	@Mock
 	private Target _mock;
-	// 指定されたモックの型を探す対象のオブジェクト
+	// @Mockで指定されたモックの型を探す対象のオブジェクト
 	@InjectMocks
 	private Target _target;
 
