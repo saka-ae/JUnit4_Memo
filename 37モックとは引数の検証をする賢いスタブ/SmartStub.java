@@ -1,8 +1,8 @@
 import static org.junit.Assert.*;
 
-public class Stub extends Target {
+public class SmartStub extends Target {
 
-	public Stub(int number) {
+	public SmartStub(int number) {
 		super(number);
 
 		// コンストラクタに渡されたパラメータを検証するガード節を追加
