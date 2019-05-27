@@ -8,7 +8,7 @@ public class TargetTest {
 
 	@Test
 	public void スタブは常に９９を返す() {
-		Target stub = new Stub(NUMBER);
+		Target stub = new SmartStub(NUMBER);
 
 		int actual = stub.getNumber();
 
