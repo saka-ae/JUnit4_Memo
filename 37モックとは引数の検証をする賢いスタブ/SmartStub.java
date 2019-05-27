@@ -7,7 +7,7 @@ public class SmartStub extends Target {
 
 		// コンストラクタに渡されたパラメータを検証するガード節を追加
 		if (super.getNumber() != 99)
-			fail("スタブに99がセットされていない");
+			fail("モックに99がセットされていない");
 	}
 
 	@Override

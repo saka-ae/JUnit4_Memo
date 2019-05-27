@@ -7,10 +7,10 @@ public class TargetTest {
 	private static final int NUMBER = 100;
 
 	@Test
-	public void スタブは常に９９を返す() {
-		Target stub = new SmartStub(NUMBER);
+	public void モックは常に９９を返す() {
+		Target mock = new SmartStub(NUMBER);
 
-		int actual = stub.getNumber();
+		int actual = mock.getNumber();
 
 		assertThat(actual, equalTo(NUMBER));
 	}
