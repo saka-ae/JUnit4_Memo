@@ -7,7 +7,7 @@ import org.hamcrest.TypeSafeMatcher;
 public class Within extends TypeSafeMatcher<Integer> {
 	private final int _max;
 
-	public Within(int max) {
+	private Within(int max) {
 		_max = max;
 	}
 
