@@ -1,0 +1,5 @@
+CREATE VIEW 学生情報 AS
+	SELECT 学籍番号, 学生.名前, 生年月日, 学部.名前 AS 学部名, 血液型
+		FROM 学生
+	JOIN 学部
+		ON 学部ID = ID

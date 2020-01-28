@@ -1,0 +1,7 @@
+BEGIN;
+
+LOCK TABLE 家計簿 IN EXCLUSIVE MODE;
+
+-- 処理
+
+COMMIT;

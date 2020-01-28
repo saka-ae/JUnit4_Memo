@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<h1>第1正規形 → 第2正規形</h1>
+	<ol>
+		<li>
+			<h3>第1正規形</h3>
+			<table border="1">
+				<tr>
+					<th bgcolor="lightgreen">部署番号</th>
+					<th bgcolor="lightgreen">社員番号</th>
+					<th bgcolor="gray">社員名</th>
+					<th>役職コード</th>
+					<th>役職名</th>
+					<th bgcolor="gray">年齢</th>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">D1</td>
+					<td bgcolor="lightgreen">00107</td>
+					<td bgcolor="gray">菅原拓真</td>
+					<td>L</td>
+					<td>主任</td>
+					<td bgcolor="gray">31</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">D1</td>
+					<td bgcolor="lightgreen">00121</td>
+					<td bgcolor="gray">湊雄輔</td>
+					<td>R</td>
+					<td>一般</td>
+					<td bgcolor="gray">22</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">D1</td>
+					<td bgcolor="lightgreen">00122</td>
+					<td bgcolor="gray">朝香あゆみ</td>
+					<td>R</td>
+					<td>一般</td>
+					<td bgcolor="gray">24</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">D2</td>
+					<td bgcolor="lightgreen">00107</td>
+					<td bgcolor="gray">菅原拓真</td>
+					<td>L</td>
+					<td>主任</td>
+					<td bgcolor="gray">31</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">D2</td>
+					<td bgcolor="lightgreen">00112</td>
+					<td bgcolor="gray">立花いずみ</td>
+					<td>C</td>
+					<td>副主任</td>
+					<td bgcolor="gray">29</td>
+				</tr>
+			</table>
+		</li>
+		<li>
+			<h3>複合主キーの一部に関数従属する列を別テーブルとして切り出す</h3>
+			<table border="1">
+				<tr>
+					<th>社員名</th>
+					<th>年齢</th>
+				</tr>
+				<tr>
+					<td>菅原拓真</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td>湊雄輔</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td>朝香あゆみ</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td>菅原拓真</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td>立花いずみ</td>
+					<td>29</td>
+				</tr>
+			</table>
+		</li>
+		<li>
+			<h3>元のテーブルの関数従属していた列を加える</h3>
+			<table border="1">
+				<tr>
+					<th bgcolor="lightgreen">社員番号</th>
+					<th>社員名</th>
+					<th>年齢</th>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00107</td>
+					<td>菅原拓真</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00121</td>
+					<td>湊雄輔</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00122</td>
+					<td>朝香あゆみ</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00107</td>
+					<td>菅原拓真</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00112</td>
+					<td>立花いずみ</td>
+					<td>29</td>
+				</tr>
+			</table>
+		</li>
+		<li>
+			<h3>加えた列を主キーとする</h3>
+			<table border="1">
+				<tr>
+					<th bgcolor="lightgreen">社員番号</th>
+					<th>社員名</th>
+					<th>年齢</th>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00107</td>
+					<td>菅原拓真</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00121</td>
+					<td>湊雄輔</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00122</td>
+					<td>朝香あゆみ</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00107</td>
+					<td>菅原拓真</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td bgcolor="lightgreen">00112</td>
+					<td>立花いずみ</td>
+					<td>29</td>
+				</tr>
+			</table>
+		</li>
+	</ol>
+</body>
+</html>

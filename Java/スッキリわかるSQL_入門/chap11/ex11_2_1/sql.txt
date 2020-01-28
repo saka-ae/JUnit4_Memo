@@ -1,0 +1,5 @@
+CREATE INDEX 学籍番号インデックス	ON 学生(学籍番号);
+CREATE INDEX 学生名インデックス		ON 学生(名前);
+CREATE INDEX 学部IDインデックス		ON 学生(学部ID);
+
+CREATE INDEX 学部名インデックス		ON 学部(名前);

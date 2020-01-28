@@ -1,0 +1,36 @@
+package practice.subjectA.LEVEL1.ex1;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String jdbcUrl	= "jdbc:h2:~/sukkiriSQL";
+		String sql		= 	"SELECT 口座番号, 名義, 種別, 残高, 更新日"	+
+							" FROM 口座";
+
+		try (
+				Connection conn = DriverManager.getConnection(jdbcUrl);
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery();
+		) {
+			while (rs.next()) {
+				String number	= rs.getString("口座番号");
+				String name		= rs.getString("名義");
+				String type		= rs.getString("種別");
+				int balance	= rs.getInt("残高");
+				Date date		= rs.getDate("更新日");
+
+				System.out.printf("%s %s %s %d %s\n", number, name, type, balance, date);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,5 @@
+CREATE SEQUENCE 費目シーケンス;
+
+SELECT NEXT VALUE FOR 費目シーケンス;
+
+SELECT CURRVAL('費目シーケンス');
