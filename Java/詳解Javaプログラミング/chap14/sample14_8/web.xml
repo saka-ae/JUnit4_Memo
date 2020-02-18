@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE web-app
+	PUBLIC "-//Sun Microsystems, Inc.//DTD Web  Application 2.3//EN"
+	"http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<!-- サーブレットのインスタンスを宣言 -->
+	<servlet>
+		<servlet-name>HelloClient</servlet-name>
+		<servlet-class>chap14.sample14_5.HelloClient</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ShowParameters</servlet-name>
+		<servlet-class>chap14.sample14_8.ShowParameters</servlet-class>
+	</servlet>
+
+	<!-- サーブレットのURLを指定 -->
+	<servlet-mapping>
+		<servlet-name>HelloClient</servlet-name>
+		<url-pattern>/HelloClient</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowParameters</servlet-name>
+		<url-pattern>/ShowParameters</url-pattern>
+	</servlet-mapping>
+</web-app>
